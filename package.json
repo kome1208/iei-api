@@ -1,0 +1,23 @@
+{
+  "name": "iei-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scheem18/iei-api.git"
+  },
+  "author": "scheem18",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scheem18/iei-api/issues"
+  },
+  "homepage": "https://github.com/scheem18/iei-api#readme",
+  "dependencies": {
+    "canvas": "^2.10.2",
+    "express": "^4.18.2"
+  }
+}
