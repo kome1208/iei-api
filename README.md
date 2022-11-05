@@ -1,2 +1,8 @@
 # iei-api
-https://iei-api.onrender.com/
+# Server startup
+```
+# Installing packages
+npm install
+
+# Start server
+node index.js
