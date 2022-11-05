@@ -35,14 +35,14 @@ app.get('/',async (req, res) => {
         if (!url) return res.json({
             status:false,
             message:'Cannot get parameter url',
-            example:'~/?url=https://cdn.discordapp.com/avatars/783305816702844990/91fc389a1a14cb27d17b34f876697b4b.png?size=4096'
+            example:'https://iei-api.onrender.com/?url=https://cdn.discordapp.com/avatars/783305816702844990/91fc389a1a14cb27d17b34f876697b4b.png?size=4096'
         });
         const ieidata = await createIei(url,color);
         const filename = `${Date.now()}.png`;
         await fs.writeFileSync(`./ieis/${filename}`, ieidata, 'base64');
         res.json({
             status:true,
-            result:`~/?file=${filename}`
+            result:`https://iei-api.onrender.com/?file=${filename}`
         });
     } else if (req.query.file) {
         const file = req.query.file;
@@ -68,7 +68,7 @@ app.get('/',async (req, res) => {
         res.json({
             status:false,
             message:'Invalid form body',
-            example:'~/?url=https://cdn.discordapp.com/avatars/783305816702844990/91fc389a1a14cb27d17b34f876697b4b.png?size=4096',
+            example:'https://iei-api.onrender.com/?url=https://cdn.discordapp.com/avatars/783305816702844990/91fc389a1a14cb27d17b34f876697b4b.png?size=4096',
             params:{
                 url:{
                     type:'string',
